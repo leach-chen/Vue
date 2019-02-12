@@ -18,10 +18,12 @@ import back from '@/components/back'
 //import HelloWorld from '@/components/HelloWorld'
 
 //网络请求
-import * as http from '@/service/api'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 Vue.use(ElementUI)
 Vue.use(Mint);
+Vue.use(VueAxios, axios)
 
 //全局注册返回组件
 Vue.component('commonback', {
@@ -29,8 +31,6 @@ Vue.component('commonback', {
   data: back.data,
   methods:back.methods
 })
-
-Vue.prototype.$http = http
 
 Vue.config.productionTip = false
 
